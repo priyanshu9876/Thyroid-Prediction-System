@@ -1,0 +1,43 @@
+{% extends "index.html" %}
+
+{% block content %}
+<div class="container text-center mt-5">
+
+    <!-- Doctor + Report Animation -->
+    <lottie-player 
+        src="https://assets9.lottiefiles.com/packages/lf20_xdfeea13.json"  
+        background="transparent"  
+        speed="1"  
+        style="width: 250px; height: 250px; margin:auto;"  
+        loop autoplay>
+    </lottie-player>
+
+    <!-- Glass Styled Result Box -->
+    <div class="glass-box p-4 mt-4 mx-auto shadow-lg" style="max-width:600px;">
+        <h3 class="text-success font-weight-bold">✅ Your Report is Ready!</h3>
+        <p class="lead">You can now download your <b>Thyroid Prediction Result</b>.</p>
+
+        <!-- Note Box -->
+        <div class="alert alert-info mt-3" role="alert">
+            <strong>Note:</strong> In the final CSV file only the type of Thyroid Disease with index will be shown.
+        </div>
+
+        <!-- Download Button -->
+        <a class="btn btn-lg btn-success px-4 py-2 mt-3 shadow" 
+           href="return_file/" 
+           download="Predictions.csv" 
+           style="border-radius: 50px; font-size: 18px;">
+            ⬇️ Download Result File
+        </a>
+    </div>
+
+    <!-- Cute Success Animation at Bottom -->
+    <lottie-player 
+        src="https://assets1.lottiefiles.com/packages/lf20_jbrw3hcz.json"  
+        background="transparent"  
+        speed="1"  
+        style="width: 180px; height: 180px; margin:30px auto;"  
+        loop autoplay>
+    </lottie-player>
+</div>
+{% endblock content %}
